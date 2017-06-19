@@ -29,8 +29,8 @@ trabajaPara(Jefe, george):-
 
 %4
 esFiel(Persona):-
-  saleCon(Persona, Pareja0),
-  not((saleCon(Persona, Pareja1), Pareja0 \= Pareja1)).
+  saleCon(Persona, Pareja),
+  not((saleCon(Persona, OtraPareja), Pareja \= OtraPareja)).
 
 %5
 acataOrden(Empleado,Jefe):-
