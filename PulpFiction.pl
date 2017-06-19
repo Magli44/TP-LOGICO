@@ -18,7 +18,6 @@ saleCon(Persona1, Persona2):-
 %2
 pareja(bernardo, bianca).
 pareja(bernardo, charo).
-noSeSabeSiSonPareja(bianca, demostenes).
 
 %3
 trabajaPara(Jefe, bernardo):-
