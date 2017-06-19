@@ -113,19 +113,13 @@ respetuosa(mafioso(capo),20).
 respetabilidad(Respetables, NoRespetables):-
   findall(PersonajeR, esRespetable(PersonajeR), ListaRespetables),
   length(ListaRespetables,Respetables),
-  findall(PersonajeN, noEsRespetable(PersonajeN), ListaNoRespetables),
+  findall(PersonajeN,(personaje(PersonajeN, _),not(esRespetable(PersonajeN))) , ListaNoRespetables),
   length(ListaNoRespetables,NoRespetables).
 
 esRespetable(Personaje):-
   nivelDeRespeto(Personaje, Nivel),
   Nivel > 9.
 
-noEsRespetable(Personaje):-
-    nivelDeRespeto(Personaje, Nivel),
-    Nivel =< 9.
-noEsRespetable(Personaje):-
-    personaje(Personaje,_),
-    not(nivelDeRespeto(Personaje,_)).
 %5
 masAtareado(Personaje):-
   personaje(Personaje, _),
