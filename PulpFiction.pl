@@ -37,7 +37,7 @@ acataOrden(Empleado,Jefe):-
   trabajaPara(Jefe,Empleado).
 acataOrden(Empleado,Jefaso):-
   trabajaPara(Jefe,Empleado),
-  trabajaPara(Jefaso,Jefe).
+  acataOrden(Jefe,Jefaso).
 
 %SegundaParte
 %personaje(Nombre, Ocupacion).
