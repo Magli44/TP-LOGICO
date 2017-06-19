@@ -21,10 +21,12 @@ pareja(bernardo, charo).
 noSeSabeSiSonPareja(bianca, demostenes).
 
 %3
-trabajaPara(vincent, bernardo).
-trabajaPara(winston, bernardo).
-trabajaPara(bianca, george).
-trabajaPara(charo, george).
+trabajaPara(Jefe, bernardo):-
+  trabajaPara(marsellus, Jefe),
+  Jefe \= jules.
+
+trabajaPara(Jefe, george):-
+  saleCon(bernardo, Jefe).
 
 %4
 esFiel(Persona):-
