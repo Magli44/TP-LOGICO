@@ -142,3 +142,5 @@ cantidadEncargos(Personaje,Encargos):-
   personaje(Personaje, _),
   findall(Tarea,encargo(_,Personaje,Tarea),Tareas),
   length(Tareas,Encargos).
+
+  %Probando
