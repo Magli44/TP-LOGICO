@@ -10,10 +10,10 @@ trabajaPara(marsellus, winston).
 %PrimeraParte
 
 %1
-saleCon(Persona1, Persona2):-
-  pareja(Persona1, Persona2).
-saleCon(Persona1, Persona2):-
-  pareja(Persona2, Persona1).
+saleCon(Persona, OtraPersona):-
+  pareja(Persona, OtraPersona).
+saleCon(Persona, OtraPersona):-
+  pareja(OtraPersona, Persona).
 
 %2
 pareja(bernardo, bianca).
