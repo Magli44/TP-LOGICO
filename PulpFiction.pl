@@ -99,17 +99,15 @@ sonAmigos(Persona, Amigo):-
 %3
 nivelDeRespeto(vincent, 15).
 
-nivelDeRespeto(Personaje, Nivel):-
-  personaje(Personaje, actriz(_)),
-  findall(Pelicula, personaje(Personaje, actriz(Pelicula)), Peliculas),
+nivelDeRespeto(Personaje,Nivel):-
+personaje(Personaje,Actividad),
+respetuosa(Actividad,Nivel).
+
+respetuosa(actriz(Peliculas),Nivel):-
   length(Peliculas, CantidadDePeliculas),
   Nivel is CantidadDePeliculas / 10.
-
-nivelDeRespeto(Personaje, 10):-
-  personaje(Personaje, mafioso(resuelveProblemas)).
-
-nivelDeRespeto(Personaje, 20):-
-  personaje(Personaje, mafioso(capo)).
+respetuosa(mafioso(resuelveProblemas),10).
+respetuosa(mafioso(capo),20).
 
 %4
 respetabilidad(Respetables, NoRespetables):-
