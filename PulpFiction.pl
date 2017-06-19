@@ -10,10 +10,10 @@ trabajaPara(marsellus, winston).
 %PrimeraParte
 
 %1
-saleCon(Persona1, Persona2):-
-  pareja(Persona1, Persona2).
-saleCon(Persona1, Persona2):-
-  pareja(Persona2, Persona1).
+saleCon(Persona, OtraPersona):-
+  pareja(Persona, OtraPersona).
+saleCon(Persona, OtraPersona):-
+  pareja(OtraPersona, Persona).
 
 %2
 pareja(bernardo, bianca).
@@ -29,8 +29,8 @@ trabajaPara(Jefe, george):-
 
 %4
 esFiel(Persona):-
-  saleCon(Persona, Pareja0),
-  not((saleCon(Persona, Pareja1), Pareja0 \= Pareja1)).
+  saleCon(Persona, Pareja),
+  not((saleCon(Persona, OtraPareja), Pareja \= OtraPareja)).
 
 %5
 acataOrden(Empleado,Jefe):-
